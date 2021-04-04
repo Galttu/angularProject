@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
+import { MatPaginatorModule } from '@angular/material/paginator'; 
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
@@ -21,8 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
         ReactiveFormsModule,
         HttpClientModule,
         AppRoutingModule,
-        BrowserAnimationsModule
-        
+        BrowserAnimationsModule,
+        MatPaginatorModule
     ],
     declarations: [
         AppComponent,

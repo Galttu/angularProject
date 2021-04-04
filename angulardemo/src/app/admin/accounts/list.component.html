@@ -3,7 +3,7 @@
 
 <a routerLink="add" class="btn btn-sm btn-success mb-2">Create Account</a>
 
-<table mat-table [dataSource]="accounts" class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef> Name </th>
@@ -36,3 +36,5 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
 </table>
+<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[1, 2, 25, 100]">
+</mat-paginator>
