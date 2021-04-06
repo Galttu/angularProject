@@ -26,12 +26,12 @@ export class ListComponent implements OnInit  {
             });
     }
     deleteAccount(id: string) {
-        const account = this.accounts.find(x => x.id === id);
+        const account =  this.dataSource.data.find(x => x.id === id);
         account.isDeleting = true;
         this.accountService.delete(id)
             .pipe(first())
             .subscribe(() => {
-                this.accounts = this.accounts.filter(x => x.id !== id) 
+                this.dataSource.data =  this.dataSource.data.filter(x => x.id !== id) 
             });
     }   
 }
